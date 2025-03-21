@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations - EcoTrack</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://i.ibb.co/Jt5zbWV/eco-car-logo.png" alt="Carbon Calculator Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <a href="#" class="notification-icon"><i class="far fa-envelope"></i></a>
+                <div class="profile-dropdown">
+                    <div class="profile-pic" id="profileDropdownBtn">
+                        <img src="https://i.ibb.co/Lk4Lv9B/solar-panels.jpg" alt="Profile Picture">
+                    </div>
+                    <div class="dropdown-menu" id="profileDropdown">
+                        <p class="dropdown-header">Logged in as <span id="userName">John Doe</span></p>
+                        <ul>
+                            <li><a href="dashboard.html">Dashboard</a></li>
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="vehicle-registration.html">Vehicle Registration</a></li>
+                            <li><a href="log-trip.html">Log a trip</a></li>
+                            <li><a href="recommendations.html">Recommendations</a></li>
+                            <li><a href="#" id="logoutBtn">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <h2>Dashboard</h2>
+            <div class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html">Overview</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="vehicle-registration.html">Vehicle Registration</a></li>
+                    <li><a href="log-trip.html">Log a Trip</a></li>
+                    <li><a href="recommendations.html" class="active">Recommendations</a></li>
+                    <li><a href="#" id="sidebarLogoutBtn">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="dashboard-content">
+            <div class="recommendations-container">
+                <div class="recommendations-header">
+                    <h2>Personalized Recommendations</h2>
+                    <p>Based on your travel patterns and vehicle usage</p>
+                </div>
+                
+                <div class="recommendations-images">
+                    <div class="recommendation-image">
+                        <img src="https://i.ibb.co/YQfgG2S/electric-car.jpg" alt="Electric car">
+                    </div>
+                    <div class="recommendation-image">
+                        <img src="https://i.ibb.co/Lk4Lv9B/solar-panels.jpg" alt="Vehicle maintenance">
+                    </div>
+                    <div class="recommendation-image">
+                        <img src="https://i.ibb.co/Jm9DjxL/hero-image.jpg" alt="Alternative transportation">
+                    </div>
+                </div>
+                
+                <div class="recommendations-list">
+                    <div class="recommendation-item">
+                        <div class="recommendation-number">One</div>
+                        <div class="recommendation-text">Consider carpooling for your daily commute to reduce emissions by up to 50%.</div>
+                    </div>
+                    <div class="recommendation-item">
+                        <div class="recommendation-number">Two</div>
+                        <div class="recommendation-text">Maintain proper tire pressure to improve fuel efficiency by 3%.</div>
+                    </div>
+                    <div class="recommendation-item">
+                        <div class="recommendation-number">Three</div>
+                        <div class="recommendation-text">Avoid rapid acceleration and braking to save fuel and reduce emissions.</div>
+                    </div>
+                    <div class="recommendation-item">
+                        <div class="recommendation-number">Four</div>
+                        <div class="recommendation-text">Consider switching to an electric or hybrid vehicle for your next purchase.</div>
+                    </div>
+                    <div class="recommendation-item">
+                        <div class="recommendation-number">Five</div>
+                        <div class="recommendation-text">Use public transportation once a week to reduce your carbon footprint.</div>
+                    </div>
+                    <div class="recommendation-item">
+                        <div class="recommendation-number">Six</div>
+                        <div class="recommendation-text">Combine errands into a single trip to minimize unnecessary driving.</div>
+                    </div>
+                    <div class="recommendation-item">
+                        <div class="recommendation-number">Seven</div>
+                        <div class="recommendation-text">Turn off your engine if you expect to be stopped for more than 1 minute.</div>
+                    </div>
+                </div>
+                
+                <div class="recommendations-actions">
+                    <button class="btn" id="downloadReportBtn">Download Report</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Download Report Modal -->
+    <div id="reportModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Download Report</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="report-options">
+                    <div class="form-group">
+                        <label>Report Type</label>
+                        <select id="reportType">
+                            <option value="recommendations">Recommendations</option>
+                            <option value="emissions">Carbon Emissions</option>
+                            <option value="comparison">Comparison Analysis</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Format</label>
+                        <select id="reportFormat">
+                            <option value="pdf">PDF</option>
+                            <option value="csv">CSV</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary modal-cancel">Cancel</button>
+                    <button type="button" class="btn" id="generateReportBtn">Generate Report</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Notification -->
+    <div id="notification" class="notification">
+        <div class="notification-content">
+            <i class="fas fa-check-circle"></i>
+            <span id="notificationMessage">Report downloaded successfully!</span>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>2025 copyright</p>
+                <div class="footer-logo-small">
+                    <div class="logo-badge">Logo</div>
+                </div>
+                <div class="social-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/recommendations.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community Challenge - EcoTrack</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="dashboard-header">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="https://i.ibb.co/Jt5zbWV/eco-car-logo.png"
+              alt="EcoTrack Logo"
+            />
+          </a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div class="user-menu">
+          <div class="notification">
+            <a href="#"><i class="far fa-envelope"></i></a>
+          </div>
+          <div class="profile-dropdown">
+            <div class="profile-pic" id="profileDropdownBtn">
+              <img
+                src="https://i.ibb.co/Lk4Lv9B/solar-panels.jpg"
+                alt="Profile Picture"
+              />
+            </div>
+            <div class="dropdown-menu" id="profileDropdown">
+              <p class="dropdown-header">
+                Logged in as <span id="userName">John Doe</span>
+              </p>
+              <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li>
+                  <a href="vehicle-registration.html">Vehicle Registration</a>
+                </li>
+                <li><a href="log-trip.html">Log a trip</a></li>
+                <li><a href="recommendations.html">Recommendations</a></li>
+                <li>
+                  <a href="community-challenge.html">Community Challenge</a>
+                </li>
+                <li><a href="#" id="logoutBtn">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="page-header">
+      <div class="container">
+        <h1>Community Challenge</h1>
+      </div>
+    </section>
+
+    <section class="community-challenges">
+      <div class="container">
+        <div class="challenges-list">
+          <div class="challenge-card">
+            <h2>Challenge 1</h2>
+            <p class="challenge-description">
+              Reduce your carbon footprint by 10% this month by using public
+              transportation or carpooling at least twice a week.
+            </p>
+            <div class="challenge-status">
+              <p>Status</p>
+              <div class="progress-bar">
+                <div class="progress" style="width: 25%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="challenge-card">
+            <h2>Challenge 2</h2>
+            <p class="challenge-description">
+              Log at least 5 eco-friendly trips this month to earn a green badge
+              for your profile.
+            </p>
+            <div class="challenge-status">
+              <p>Status</p>
+              <div class="progress-bar">
+                <div class="progress" style="width: 40%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="challenge-card">
+            <h2>Challenge 3</h2>
+            <p class="challenge-description">
+              Invite 3 friends to join the EcoTrack community and help spread
+              awareness about carbon emissions.
+            </p>
+            <div class="challenge-status">
+              <p>Status</p>
+              <div class="progress-bar">
+                <div class="progress" style="width: 66%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="challenge-card">
+            <h2>Challenge 4</h2>
+            <p class="challenge-description">
+              Complete your vehicle profile with all details to get personalized
+              emission reduction tips.
+            </p>
+            <div class="challenge-status">
+              <p>Status</p>
+              <div class="progress-bar">
+                <div class="progress" style="width: 100%"></div>
+              </div>
+              <div class="challenge-completed">
+                <span class="badge">Completed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-bottom">
+          <p>2025 copyright</p>
+          <div class="footer-logo-small">
+            <h3>Logo</h3>
+          </div>
+          <div class="social-icons-small">
+            <a href="#"><i class="fas fa-circle"></i></a>
+            <a href="#"><i class="fas fa-circle"></i></a>
+            <a href="#"><i class="fas fa-circle"></i></a>
+            <a href="#"><i class="fas fa-circle"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/community.js"></script>
+  </body>
+</html>

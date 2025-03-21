@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Trip - EcoTrack</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://i.ibb.co/Jt5zbWV/eco-car-logo.png" alt="Carbon Calculator Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <a href="#" class="notification-icon"><i class="far fa-envelope"></i></a>
+                <div class="profile-dropdown">
+                    <div class="profile-pic" id="profileDropdownBtn">
+                        <img src="https://i.ibb.co/Lk4Lv9B/solar-panels.jpg" alt="Profile Picture">
+                    </div>
+                    <div class="dropdown-menu" id="profileDropdown">
+                        <p class="dropdown-header">Logged in as <span id="userName">John Doe</span></p>
+                        <ul>
+                            <li><a href="dashboard.html">Dashboard</a></li>
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="vehicle-registration.html">Vehicle Registration</a></li>
+                            <li><a href="log-trip.html">Log a trip</a></li>
+                            <li><a href="recommendations.html">Recommendations</a></li>
+                            <li><a href="#" id="logoutBtn">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <h2>Dashboard</h2>
+            <div class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html">Overview</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="vehicle-registration.html">Vehicle Registration</a></li>
+                    <li><a href="log-trip.html" class="active">Log a Trip</a></li>
+                    <li><a href="recommendations.html">Recommendations</a></li>
+                    <li><a href="#" id="sidebarLogoutBtn">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="dashboard-content">
+            <div class="log-trip-form-container">
+                <div class="form-group">
+                    <label>Choose your vehicle</label>
+                    <select id="vehicle" class="form-control">
+                        <option value="" selected disabled>Select your vehicle</option>
+                        <option value="tesla">Tesla Model 3 (Electric, 2022)</option>
+                        <option value="toyota">Toyota Prius (Hybrid, 2020)</option>
+                        <option value="honda">Honda Civic (Gasoline, 2019)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Distance traveled (km)</label>
+                    <input type="number" id="distance" class="form-control" value="50">
+                </div>
+                
+                <div class="form-group">
+                    <label>Trip type</label>
+                    <select id="tripType" class="form-control">
+                        <option value="" selected disabled>Select trip type</option>
+                        <option value="commute" selected>Daily commute</option>
+                        <option value="leisure">Leisure</option>
+                        <option value="business">Business</option>
+                        <option value="shopping">Shopping</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Traffic conditions</label>
+                    <select id="trafficConditions" class="form-control">
+                        <option value="" selected disabled>Select traffic conditions</option>
+                        <option value="light">Light traffic</option>
+                        <option value="moderate">Moderate traffic</option>
+                        <option value="heavy" selected>Heavy traffic</option>
+                        <option value="congested">Congested</option>
+                    </select>
+                </div>
+                
+                <div class="emission-result">
+                    <h3>Estimated Carbon Emission</h3>
+                    <p class="emission-value">12.00 <span>kg CO2</span></p>
+                    <p class="emission-note">This is an estimate based on your vehicle type and travel conditions</p>
+                </div>
+                
+                <div class="form-actions">
+                    <button class="btn-secondary" id="backToDashboard">Go to Dashboard</button>
+                    <button class="btn" id="saveTrip">Save Trip</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>2025 copyright</p>
+                <div class="footer-logo-small">
+                    <div class="logo-badge">Logo</div>
+                </div>
+                <div class="social-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/trip.js"></script>
+</body>
+</html>

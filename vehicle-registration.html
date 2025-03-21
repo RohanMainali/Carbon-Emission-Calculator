@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Registration - EcoTrack</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://i.ibb.co/Jt5zbWV/eco-car-logo.png" alt="Carbon Calculator Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <a href="#" class="notification-icon"><i class="far fa-envelope"></i></a>
+                <div class="profile-dropdown">
+                    <div class="profile-pic" id="profileDropdownBtn">
+                        <img src="https://i.ibb.co/Lk4Lv9B/solar-panels.jpg" alt="Profile Picture">
+                    </div>
+                    <div class="dropdown-menu" id="profileDropdown">
+                        <p class="dropdown-header">Logged in as <span id="userName">John Doe</span></p>
+                        <ul>
+                            <li><a href="dashboard.html">Dashboard</a></li>
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="vehicle-registration.html">Vehicle Registration</a></li>
+                            <li><a href="log-trip.html">Log a trip</a></li>
+                            <li><a href="recommendations.html">Recommendations</a></li>
+                            <li><a href="#" id="logoutBtn">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <h2>Dashboard</h2>
+            <div class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html">Overview</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="vehicle-registration.html" class="active">Vehicle Registration</a></li>
+                    <li><a href="log-trip.html">Log a Trip</a></li>
+                    <li><a href="recommendations.html">Recommendations</a></li>
+                    <li><a href="#" id="sidebarLogoutBtn">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="dashboard-content">
+            <div class="vehicle-registration-container">
+                <form id="vehicleRegistrationForm" class="vehicle-registration-form">
+                    <div class="form-row">
+                        <div class="form-label">Vehicle type</div>
+                        <div class="form-field">
+                            <select id="vehicleType" class="form-select">
+                                <option value="">Select vehicle type</option>
+                                <option value="sedan">Sedan</option>
+                                <option value="suv">SUV</option>
+                                <option value="hatchback">Hatchback</option>
+                                <option value="truck">Truck</option>
+                                <option value="van">Van</option>
+                                <option value="motorcycle">Motorcycle</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-label">Fuel type</div>
+                        <div class="form-field">
+                            <select id="fuelType" class="form-select">
+                                <option value="">Select fuel type</option>
+                                <option value="petrol">Petrol</option>
+                                <option value="diesel">Diesel</option>
+                                <option value="electric">Electric</option>
+                                <option value="hybrid">Hybrid</option>
+                                <option value="cng">CNG</option>
+                                <option value="lpg">LPG</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-label">Mileage</div>
+                        <div class="form-field mileage-field">
+                            <input type="number" id="mileage" class="form-input" placeholder="Enter mileage">
+                            <select id="mileageUnit" class="form-select unit-select">
+                                <option value="km">km</option>
+                                <option value="miles">miles</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-label">Driving gear</div>
+                        <div class="form-field">
+                            <input type="text" id="drivingGear" class="form-input" placeholder="e.g., Manual, Automatic">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-label">Vehicle age/model</div>
+                        <div class="form-field">
+                            <input type="text" id="vehicleModel" class="form-input" placeholder="e.g., 2020 Toyota Prius">
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" id="goBackBtn" class="btn-secondary">Go back</button>
+                        <button type="submit" class="btn">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Message Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Success!</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="success-message">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Vehicle registered successfully!</p>
+                </div>
+                <div class="form-actions center">
+                    <button type="button" class="btn" id="viewDashboardBtn">View Dashboard</button>
+                    <button type="button" class="btn-secondary" id="registerAnotherBtn">Register Another</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Confirm Action</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to go back? Your changes will not be saved.</p>
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary modal-cancel">Cancel</button>
+                    <button type="button" class="btn" id="confirmGoBackBtn">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Notification -->
+    <div id="notification" class="notification">
+        <div class="notification-content">
+            <i class="fas fa-check-circle"></i>
+            <span id="notificationMessage">Vehicle registered successfully!</span>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>2025 copyright</p>
+                <div class="footer-logo-small">
+                    <div class="logo-badge">Logo</div>
+                </div>
+                <div class="social-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/vehicle.js"></script>
+</body>
+</html>
