@@ -4,153 +4,561 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Community Challenge - EcoTrack</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/community-challenge.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
   </head>
   <body>
-    <header class="dashboard-header">
-      <div class="container">
-        <div class="logo">
-          <a href="index.html">
-            <img
-              src="https://i.ibb.co/Jt5zbWV/eco-car-logo.png"
-              alt="EcoTrack Logo"
-            />
-          </a>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="blogs.html">Blogs</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </nav>
-        <div class="user-menu">
-          <div class="notification">
-            <a href="#"><i class="far fa-envelope"></i></a>
-          </div>
-          <div class="profile-dropdown">
-            <div class="profile-pic" id="profileDropdownBtn">
+    <div class="dashboard-wrapper">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="logo">
+            <a href="index.html">
               <img
-                src="https://i.ibb.co/Lk4Lv9B/solar-panels.jpg"
-                alt="Profile Picture"
+                src="https://i.ibb.co/Jt5zbWV/eco-car-logo.png"
+                alt="EcoTrack Logo"
+              />
+            </a>
+          </div>
+          <h2>Dashboard</h2>
+        </div>
+
+        <div class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="dashboard.html"
+                ><i class="fas fa-chart-pie"></i> <span>Overview</span></a
+              >
+            </li>
+            <li>
+              <a href="profile.html"
+                ><i class="fas fa-user"></i> <span>Profile</span></a
+              >
+            </li>
+            <li>
+              <a href="vehicle-registration.html"
+                ><i class="fas fa-car"></i> <span>Vehicle Registration</span></a
+              >
+            </li>
+            <li>
+              <a href="log-trip.html"
+                ><i class="fas fa-route"></i> <span>Log a Trip</span></a
+              >
+            </li>
+            <li>
+              <a href="recommendations.html"
+                ><i class="fas fa-lightbulb"></i>
+                <span>Recommendations</span></a
+              >
+            </li>
+            <li>
+              <a href="community-challenge.html" class="active"
+                ><i class="fas fa-users"></i>
+                <span>Community Challenge</span></a
+              >
+            </li>
+            <li>
+              <a href="#" id="sidebarLogoutBtn"
+                ><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-footer">
+          <p>© 2025 EcoTrack</p>
+        </div>
+      </aside>
+
+      <main class="dashboard-main">
+        <header class="dashboard-header">
+          <div class="header-left">
+            <button id="sidebarToggle" class="sidebar-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+            <h1>Community Challenge</h1>
+          </div>
+
+          <div class="header-right">
+            <a href="#" class="notification-icon">
+              <i class="far fa-envelope"></i>
+              <span class="notification-badge">3</span>
+            </a>
+
+            <div class="user-profile">
+              <div class="profile-pic" id="profileDropdownBtn">
+                <img
+                  src="https://i.ibb.co/Lk4Lv9B/solar-panels.jpg"
+                  alt="Profile Picture"
+                />
+              </div>
+              <div class="dropdown-menu" id="profileDropdown">
+                <p class="dropdown-header">
+                  Logged in as <span id="userName">John Doe</span>
+                </p>
+                <ul>
+                  <li><a href="dashboard.html">Dashboard</a></li>
+                  <li><a href="profile.html">Profile</a></li>
+                  <li>
+                    <a href="vehicle-registration.html">Vehicle Registration</a>
+                  </li>
+                  <li><a href="log-trip.html">Log a trip</a></li>
+                  <li><a href="recommendations.html">Recommendations</a></li>
+                  <li>
+                    <a href="community-challenge.html">Community Challenge</a>
+                  </li>
+                  <li><a href="#" id="logoutBtn">Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <div class="dashboard-content">
+          <div class="welcome-banner">
+            <div class="welcome-text">
+              <h2>Join Community Challenges</h2>
+              <p>
+                Participate in eco-friendly challenges with other community
+                members to make a bigger impact together. Complete challenges to
+                earn badges and rewards!
+              </p>
+            </div>
+            <div class="welcome-actions">
+              <a href="#" class="btn btn-primary-gadi" id="createChallengeBtn">
+                <i class="fas fa-plus"></i> Create Challenge
+              </a>
+            </div>
+          </div>
+
+          <div class="challenges-container">
+            <div class="challenge-card active-challenge">
+              <div class="challenge-header">
+                <h3>30-Day Car-Free Challenge</h3>
+                <div class="challenge-badge">
+                  <i class="fas fa-medal"></i>
+                  <span>Active</span>
+                </div>
+              </div>
+              <div class="challenge-body">
+                <div class="challenge-description">
+                  <p>
+                    Go car-free for 30 days by using public transportation,
+                    biking, walking, or carpooling. Track your progress and see
+                    how much CO2 you can save!
+                  </p>
+                </div>
+                <div class="challenge-meta">
+                  <div class="challenge-participants">
+                    <i class="fas fa-users"></i>
+                    <span>245 Participants</span>
+                  </div>
+                  <div class="challenge-timeframe">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>Ends in 15 days</span>
+                  </div>
+                </div>
+                <div class="challenge-progress">
+                  <div class="progress-label">
+                    <span>Your Progress</span>
+                    <span>15/30 days</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 50%"></div>
+                  </div>
+                </div>
+                <div class="challenge-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">35kg</div>
+                    <div class="stat-label">CO₂ Saved</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">15</div>
+                    <div class="stat-label">Days Completed</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">#24</div>
+                    <div class="stat-label">Your Rank</div>
+                  </div>
+                </div>
+              </div>
+              <div class="challenge-footer">
+                <button class="btn-primary log-progress-btn">
+                  <i class="fas fa-check"></i> Log Today's Progress
+                </button>
+                <button class="btn-secondary view-leaderboard-btn">
+                  <i class="fas fa-list-ol"></i> View Leaderboard
+                </button>
+              </div>
+            </div>
+
+            <div class="challenge-card">
+              <div class="challenge-header">
+                <h3>Reduce Home Energy Usage</h3>
+                <div class="challenge-badge upcoming">
+                  <i class="fas fa-clock"></i>
+                  <span>Upcoming</span>
+                </div>
+              </div>
+              <div class="challenge-body">
+                <div class="challenge-description">
+                  <p>
+                    Reduce your home energy consumption by 20% over the next
+                    month. Track your electricity usage and implement
+                    energy-saving practices.
+                  </p>
+                </div>
+                <div class="challenge-meta">
+                  <div class="challenge-participants">
+                    <i class="fas fa-users"></i>
+                    <span>178 Participants</span>
+                  </div>
+                  <div class="challenge-timeframe">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>Starts in 5 days</span>
+                  </div>
+                </div>
+                <div class="challenge-details">
+                  <div class="detail-item">
+                    <i class="fas fa-trophy"></i>
+                    <div class="detail-content">
+                      <h4>Rewards</h4>
+                      <p>
+                        Energy Saver badge, $50 gift card for top performers
+                      </p>
+                    </div>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-tasks"></i>
+                    <div class="detail-content">
+                      <h4>Requirements</h4>
+                      <p>
+                        Submit weekly electricity meter readings, implement at
+                        least 5 energy-saving tips
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="challenge-footer">
+                <button class="btn-primary join-challenge-btn">
+                  <i class="fas fa-user-plus"></i> Join Challenge
+                </button>
+                <button class="btn-secondary remind-me-btn">
+                  <i class="fas fa-bell"></i> Remind Me
+                </button>
+              </div>
+            </div>
+
+            <div class="challenge-card">
+              <div class="challenge-header">
+                <h3>Zero Waste Week</h3>
+                <div class="challenge-badge completed">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Completed</span>
+                </div>
+              </div>
+              <div class="challenge-body">
+                <div class="challenge-description">
+                  <p>
+                    Minimize your waste production for one week by refusing
+                    single-use items, recycling properly, and composting organic
+                    waste.
+                  </p>
+                </div>
+                <div class="challenge-meta">
+                  <div class="challenge-participants">
+                    <i class="fas fa-users"></i>
+                    <span>312 Participants</span>
+                  </div>
+                  <div class="challenge-timeframe">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>Ended 2 weeks ago</span>
+                  </div>
+                </div>
+                <div class="challenge-results">
+                  <div class="result-item">
+                    <div class="result-label">Your Rank</div>
+                    <div class="result-value">#15 of 312</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Waste Reduced</div>
+                    <div class="result-value">4.2 kg</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Badge Earned</div>
+                    <div class="result-value">
+                      <i class="fas fa-award"></i> Zero Waste Hero
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="challenge-footer">
+                <button class="btn-primary view-certificate-btn">
+                  <i class="fas fa-certificate"></i> View Certificate
+                </button>
+                <button class="btn-secondary share-results-btn">
+                  <i class="fas fa-share-alt"></i> Share Results
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="community-stats-section">
+            <div class="section-header">
+              <h3>Community Impact</h3>
+            </div>
+            <div class="community-stats-grid">
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-content">
+                  <div class="stat-value">1,245</div>
+                  <div class="stat-label">Active Participants</div>
+                </div>
+              </div>
+
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-leaf"></i>
+                </div>
+                <div class="stat-content">
+                  <div class="stat-value">12.5 tons</div>
+                  <div class="stat-label">CO₂ Saved This Month</div>
+                </div>
+              </div>
+
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-trophy"></i>
+                </div>
+                <div class="stat-content">
+                  <div class="stat-value">28</div>
+                  <div class="stat-label">Challenges Completed</div>
+                </div>
+              </div>
+
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-tree"></i>
+                </div>
+                <div class="stat-content">
+                  <div class="stat-value">625</div>
+                  <div class="stat-label">Trees Equivalent</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Create Challenge Modal -->
+    <div id="createChallengeModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Create a New Challenge</h2>
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <form id="createChallengeForm">
+            <div class="form-group">
+              <label for="challengeTitle">Challenge Title</label>
+              <input
+                type="text"
+                id="challengeTitle"
+                class="form-control"
+                placeholder="Enter a title for your challenge"
               />
             </div>
-            <div class="dropdown-menu" id="profileDropdown">
-              <p class="dropdown-header">
-                Logged in as <span id="userName">John Doe</span>
-              </p>
-              <ul>
-                <li><a href="dashboard.html">Dashboard</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li>
-                  <a href="vehicle-registration.html">Vehicle Registration</a>
-                </li>
-                <li><a href="log-trip.html">Log a trip</a></li>
-                <li><a href="recommendations.html">Recommendations</a></li>
-                <li>
-                  <a href="community-challenge.html">Community Challenge</a>
-                </li>
-                <li><a href="#" id="logoutBtn">Logout</a></li>
-              </ul>
+
+            <div class="form-group">
+              <label for="challengeDescription">Description</label>
+              <textarea
+                id="challengeDescription"
+                class="form-control"
+                rows="4"
+                placeholder="Describe your challenge and its goals"
+              ></textarea>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="startDate">Start Date</label>
+                <input type="date" id="startDate" class="form-control" />
+              </div>
+
+              <div class="form-group">
+                <label for="endDate">End Date</label>
+                <input type="date" id="endDate" class="form-control" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="challengeCategory">Category</label>
+              <select id="challengeCategory" class="form-control">
+                <option value="">Select a category</option>
+                <option value="transportation">Transportation</option>
+                <option value="energy">Energy</option>
+                <option value="waste">Waste Reduction</option>
+                <option value="food">Sustainable Food</option>
+                <option value="water">Water Conservation</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="challengeRewards">Rewards</label>
+              <input
+                type="text"
+                id="challengeRewards"
+                class="form-control"
+                placeholder="Describe the rewards for completing the challenge"
+              />
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn-secondary modal-cancel">
+                Cancel
+              </button>
+              <button type="submit" class="btn-primary">
+                Create Challenge
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Leaderboard Modal -->
+    <div id="leaderboardModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Challenge Leaderboard</h2>
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <div class="leaderboard-filters">
+            <select id="leaderboardFilter" class="form-control">
+              <option value="all">All Participants</option>
+              <option value="friends">Friends Only</option>
+              <option value="local">Local Area</option>
+            </select>
+          </div>
+
+          <div class="leaderboard-table">
+            <div class="leaderboard-header">
+              <div class="rank-column">Rank</div>
+              <div class="user-column">User</div>
+              <div class="progress-column">Progress</div>
+              <div class="impact-column">CO₂ Saved</div>
+            </div>
+
+            <div class="leaderboard-row top-rank">
+              <div class="rank-column">#1</div>
+              <div class="user-column">
+                <img
+                  src="https://i.ibb.co/Lk4Lv9B/solar-panels.jpg"
+                  alt="User Avatar"
+                />
+                <span>Sarah Johnson</span>
+              </div>
+              <div class="progress-column">
+                <div class="progress-bar">
+                  <div class="progress" style="width: 100%"></div>
+                </div>
+                <span>30/30 days</span>
+              </div>
+              <div class="impact-column">78kg</div>
+            </div>
+
+            <div class="leaderboard-row top-rank">
+              <div class="rank-column">#2</div>
+              <div class="user-column">
+                <img
+                  src="https://i.ibb.co/YQfgG2S/electric-car.jpg"
+                  alt="User Avatar"
+                />
+                <span>Michael Chen</span>
+              </div>
+              <div class="progress-column">
+                <div class="progress-bar">
+                  <div class="progress" style="width: 100%"></div>
+                </div>
+                <span>30/30 days</span>
+              </div>
+              <div class="impact-column">72kg</div>
+            </div>
+
+            <div class="leaderboard-row top-rank">
+              <div class="rank-column">#3</div>
+              <div class="user-column">
+                <img
+                  src="https://i.ibb.co/Jm9DjxL/hero-image.jpg"
+                  alt="User Avatar"
+                />
+                <span>Emma Rodriguez</span>
+              </div>
+              <div class="progress-column">
+                <div class="progress-bar">
+                  <div class="progress" style="width: 93%"></div>
+                </div>
+                <span>28/30 days</span>
+              </div>
+              <div class="impact-column">65kg</div>
+            </div>
+
+            <div class="leaderboard-row">
+              <div class="rank-column">#4</div>
+              <div class="user-column">
+                <img
+                  src="https://i.ibb.co/Lk4Lv9B/solar-panels.jpg"
+                  alt="User Avatar"
+                />
+                <span>David Kim</span>
+              </div>
+              <div class="progress-column">
+                <div class="progress-bar">
+                  <div class="progress" style="width: 87%"></div>
+                </div>
+                <span>26/30 days</span>
+              </div>
+              <div class="impact-column">58kg</div>
+            </div>
+
+            <div class="leaderboard-row current-user">
+              <div class="rank-column">#24</div>
+              <div class="user-column">
+                <img
+                  src="https://i.ibb.co/Lk4Lv9B/solar-panels.jpg"
+                  alt="User Avatar"
+                />
+                <span>John Doe (You)</span>
+              </div>
+              <div class="progress-column">
+                <div class="progress-bar">
+                  <div class="progress" style="width: 50%"></div>
+                </div>
+                <span>15/30 days</span>
+              </div>
+              <div class="impact-column">35kg</div>
             </div>
           </div>
         </div>
       </div>
-    </header>
+    </div>
 
-    <section class="page-header">
-      <div class="container">
-        <h1>Community Challenge</h1>
+    <!-- Success Notification -->
+    <div id="notification" class="notification">
+      <div class="notification-content">
+        <i class="fas fa-check-circle"></i>
+        <span id="notificationMessage">Operation completed successfully!</span>
       </div>
-    </section>
+    </div>
 
-    <section class="community-challenges">
-      <div class="container">
-        <div class="challenges-list">
-          <div class="challenge-card">
-            <h2>Challenge 1</h2>
-            <p class="challenge-description">
-              Reduce your carbon footprint by 10% this month by using public
-              transportation or carpooling at least twice a week.
-            </p>
-            <div class="challenge-status">
-              <p>Status</p>
-              <div class="progress-bar">
-                <div class="progress" style="width: 25%"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="challenge-card">
-            <h2>Challenge 2</h2>
-            <p class="challenge-description">
-              Log at least 5 eco-friendly trips this month to earn a green badge
-              for your profile.
-            </p>
-            <div class="challenge-status">
-              <p>Status</p>
-              <div class="progress-bar">
-                <div class="progress" style="width: 40%"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="challenge-card">
-            <h2>Challenge 3</h2>
-            <p class="challenge-description">
-              Invite 3 friends to join the EcoTrack community and help spread
-              awareness about carbon emissions.
-            </p>
-            <div class="challenge-status">
-              <p>Status</p>
-              <div class="progress-bar">
-                <div class="progress" style="width: 66%"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="challenge-card">
-            <h2>Challenge 4</h2>
-            <p class="challenge-description">
-              Complete your vehicle profile with all details to get personalized
-              emission reduction tips.
-            </p>
-            <div class="challenge-status">
-              <p>Status</p>
-              <div class="progress-bar">
-                <div class="progress" style="width: 100%"></div>
-              </div>
-              <div class="challenge-completed">
-                <span class="badge">Completed</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <div class="footer-bottom">
-          <p>2025 copyright</p>
-          <div class="footer-logo-small">
-            <h3>Logo</h3>
-          </div>
-          <div class="social-icons-small">
-            <a href="#"><i class="fas fa-circle"></i></a>
-            <a href="#"><i class="fas fa-circle"></i></a>
-            <a href="#"><i class="fas fa-circle"></i></a>
-            <a href="#"><i class="fas fa-circle"></i></a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script src="js/community.js"></script>
+    <script src="js/community-challenge.js"></script>
   </body>
 </html>

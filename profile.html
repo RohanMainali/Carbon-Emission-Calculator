@@ -1,347 +1,494 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile - EcoTrack</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <header class="dashboard-header">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="https://i.ibb.co/Jt5zbWV/eco-car-logo.png" alt="Carbon Calculator Logo">
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="blogs.html">Blogs</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-            <div class="user-menu">
-                <a href="#" class="notification-icon"><i class="far fa-envelope"></i></a>
-                <div class="profile-dropdown">
-                    <div class="profile-pic" id="profileDropdownBtn">
-                        <img src="https://i.ibb.co/Lk4Lv9B/solar-panels.jpg" alt="Profile Picture">
-                    </div>
-                    <div class="dropdown-menu" id="profileDropdown">
-                        <p class="dropdown-header">Logged in as <span id="userName">John Doe</span></p>
-                        <ul>
-                            <li><a href="dashboard.html">Dashboard</a></li>
-                            <li><a href="profile.html">Profile</a></li>
-                            <li><a href="vehicle-registration.html">Vehicle Registration</a></li>
-                            <li><a href="log-trip.html">Log a trip</a></li>
-                            <li><a href="recommendations.html">Recommendations</a></li>
-                            <li><a href="#" id="logoutBtn">Logout</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="dashboard-wrapper">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="logo">
+            <a href="index.html">
+              <img
+                src="https://i.ibb.co/Jt5zbWV/eco-car-logo.png"
+                alt="EcoTrack Logo"
+              />
+            </a>
+          </div>
+          <h2>Dashboard</h2>
         </div>
-    </header>
 
-    <div class="dashboard-container">
-        <div class="sidebar">
-            <h2>Dashboard</h2>
-            <div class="sidebar-nav">
-                <ul>
-                    <li><a href="dashboard.html">Overview</a></li>
-                    <li><a href="profile.html" class="active">Profile</a></li>
-                    <li><a href="vehicle-registration.html">Vehicle Registration</a></li>
-                    <li><a href="log-trip.html">Log a Trip</a></li>
-                    <li><a href="recommendations.html">Recommendations</a></li>
-                    <li><a href="#" id="sidebarLogoutBtn">Logout</a></li>
-                </ul>
-            </div>
+        <div class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="dashboard.html"
+                ><i class="fas fa-chart-pie"></i> <span>Overview</span></a
+              >
+            </li>
+            <li>
+              <a href="profile.html" class="active"
+                ><i class="fas fa-user"></i> <span>Profile</span></a
+              >
+            </li>
+            <li>
+              <a href="vehicle-registration.html"
+                ><i class="fas fa-car"></i> <span>Vehicle Registration</span></a
+              >
+            </li>
+            <li>
+              <a href="log-trip.html"
+                ><i class="fas fa-route"></i> <span>Log a Trip</span></a
+              >
+            </li>
+            <li>
+              <a href="recommendations.html"
+                ><i class="fas fa-lightbulb"></i>
+                <span>Recommendations</span></a
+              >
+            </li>
+            <li>
+              <a href="community-challenge.html"
+                ><i class="fas fa-users"></i>
+                <span>Community Challenge</span></a
+              >
+            </li>
+            <li>
+              <a href="#" id="sidebarLogoutBtn"
+                ><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a
+              >
+            </li>
+          </ul>
         </div>
+
+        <div class="sidebar-footer">
+          <p>© 2025 EcoTrack</p>
+        </div>
+      </aside>
+
+      <main class="dashboard-main">
+        <header class="dashboard-header">
+          <div class="header-left">
+            <h1>My Profile</h1>
+          </div>
+
+          <div class="header-right">
+            <a href="#" class="notification-icon">
+              <i class="far fa-envelope"></i>
+              <span class="notification-badge">3</span>
+            </a>
+
+            <div class="user-profile">
+              <div class="profile-pic" id="profileDropdownBtn">
+                <img
+                  src="https://i.ibb.co/Lk4Lv9B/solar-panels.jpg"
+                  alt="Profile Picture"
+                />
+              </div>
+              <div class="dropdown-menu" id="profileDropdown">
+                <p class="dropdown-header">
+                  Logged in as <span id="userName">John Doe</span>
+                </p>
+                <ul>
+                  <li><a href="dashboard.html">Dashboard</a></li>
+                  <li><a href="profile.html">Profile</a></li>
+                  <li>
+                    <a href="vehicle-registration.html">Vehicle Registration</a>
+                  </li>
+                  <li><a href="log-trip.html">Log a trip</a></li>
+                  <li><a href="recommendations.html">Recommendations</a></li>
+                  <li>
+                    <a href="community-challenge.html">Community Challenge</a>
+                  </li>
+                  <li><a href="#" id="logoutBtn">Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </header>
+
         <div class="dashboard-content">
-            <div class="profile-header">
-                <div class="profile-avatar">
-                    <img src="https://i.ibb.co/Lk4Lv9B/solar-panels.jpg" alt="John Doe">
+          <div class="profile-header-card">
+            <div class="profile-avatar">
+              <img
+                src="https://i.ibb.co/Lk4Lv9B/solar-panels.jpg"
+                alt="John Doe"
+              />
+            </div>
+            <div class="profile-info">
+              <h2 class="profile-name">John Doe</h2>
+              <p class="profile-tagline">Eco-conscious traveler</p>
+            </div>
+          </div>
+
+          <div class="profile-grid">
+            <div class="profile-card">
+              <div class="profile-card-header">
+                <h3>User Details</h3>
+                <a href="#" class="edit-profile-btn" id="editProfileBtn">
+                  <i class="fas fa-edit"></i> Edit Profile
+                </a>
+              </div>
+              <div class="profile-card-content">
+                <div class="profile-detail">
+                  <label>Name</label>
+                  <span>John Doe</span>
                 </div>
-                <h2 class="profile-name">John Doe</h2>
+                <div class="profile-detail">
+                  <label>Email Address</label>
+                  <span>rohanmainali@gmail.com</span>
+                </div>
+                <div class="profile-detail">
+                  <label>Location</label>
+                  <span>State/Province</span>
+                </div>
+                <div class="profile-detail">
+                  <label>Member Since</label>
+                  <span>January 2025</span>
+                </div>
+              </div>
             </div>
 
-            <div class="profile-grid">
-                <div class="profile-card">
-                    <div class="profile-card-header">
-                        <h3>User Details</h3>
-                        <a href="#" class="edit-profile-btn" id="editProfileBtn">Edit Profile</a>
+            <div class="profile-card">
+              <div class="profile-card-header">
+                <h3>My Vehicles</h3>
+                <a href="#" class="add-vehicle-btn" id="addVehicleBtn"
+                  ><i class="fas fa-plus"></i
+                ></a>
+              </div>
+              <div class="profile-card-content">
+                <div class="vehicle-list">
+                  <div class="vehicle-item">
+                    <div class="vehicle-info">
+                      <h4>Toyota Prius</h4>
+                      <p>Hybrid | 2020</p>
                     </div>
-                    <div class="profile-card-content">
-                        <div class="profile-detail">
-                            <label>Name</label>
-                            <span>John Doe</span>
-                        </div>
-                        <div class="profile-detail">
-                            <label>Email Address</label>
-                            <span>rohanmainali@gmail.com</span>
-                        </div>
-                        <div class="profile-detail">
-                            <label>Location</label>
-                            <span>State/Province</span>
-                        </div>
+                    <div class="vehicle-actions">
+                      <a href="#" class="vehicle-edit-btn"
+                        ><i class="fas fa-edit"></i
+                      ></a>
+                      <a href="#" class="vehicle-delete-btn"
+                        ><i class="fas fa-trash"></i
+                      ></a>
                     </div>
+                  </div>
+                  <div class="vehicle-item">
+                    <div class="vehicle-info">
+                      <h4>Tesla Model 3</h4>
+                      <p>Electric | 2022</p>
+                    </div>
+                    <div class="vehicle-actions">
+                      <a href="#" class="vehicle-edit-btn"
+                        ><i class="fas fa-edit"></i
+                      ></a>
+                      <a href="#" class="vehicle-delete-btn"
+                        ><i class="fas fa-trash"></i
+                      ></a>
+                    </div>
+                  </div>
                 </div>
-
-                <div class="profile-card">
-                    <div class="profile-card-header">
-                        <h3>My Vehicles</h3>
-                        <a href="#" class="add-vehicle-btn" id="addVehicleBtn"><i class="fas fa-plus"></i></a>
-                    </div>
-                    <div class="profile-card-content">
-                        <div class="vehicle-list">
-                            <div class="vehicle-item">
-                                <div class="vehicle-info">
-                                    <h4>Toyota Prius</h4>
-                                    <p>Hybrid | 2020</p>
-                                </div>
-                                <div class="vehicle-actions">
-                                    <a href="#" class="vehicle-edit-btn"><i class="fas fa-edit"></i></a>
-                                    <a href="#" class="vehicle-delete-btn"><i class="fas fa-trash"></i></a>
-                                </div>
-                            </div>
-                            <div class="vehicle-item">
-                                <div class="vehicle-info">
-                                    <h4>Tesla Model 3</h4>
-                                    <p>Electric | 2022</p>
-                                </div>
-                                <div class="vehicle-actions">
-                                    <a href="#" class="vehicle-edit-btn"><i class="fas fa-edit"></i></a>
-                                    <a href="#" class="vehicle-delete-btn"><i class="fas fa-trash"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="profile-card">
-                    <div class="profile-card-header">
-                        <h3>Activity</h3>
-                    </div>
-                    <div class="profile-card-content">
-                        <div class="activity-list">
-                            <div class="activity-item">
-                                <a href="vehicle-registration.html">Register a vehicle</a>
-                            </div>
-                            <div class="activity-item">
-                                <a href="log-trip.html">Record a trip</a>
-                            </div>
-                            <div class="activity-item">
-                                <a href="#" id="downloadReportBtn">Download report</a>
-                            </div>
-                            <div class="activity-item">
-                                <a href="recommendations.html">Get Recommendations</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="profile-card">
-                    <div class="profile-card-header">
-                        <h3>Badges</h3>
-                    </div>
-                    <div class="profile-card-content">
-                        <div class="badges-grid">
-                            <div class="badge-item">
-                                <img src="https://i.ibb.co/Jm9DjxL/hero-image.jpg" alt="First Trip Badge">
-                                <span>First Trip</span>
-                            </div>
-                            <div class="badge-item">
-                                <img src="https://i.ibb.co/YQfgG2S/electric-car.jpg" alt="Carbon Saver">
-                                <span>Carbon Saver</span>
-                            </div>
-                            <div class="badge-item">
-                                <img src="https://i.ibb.co/Lk4Lv9B/solar-panels.jpg" alt="Eco Warrior">
-                                <span>Eco Warrior</span>
-                            </div>
-                        </div>
-                        <div class="badges-action">
-                            <a href="#" id="earnBadgeBtn">Earn a badge</a>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+
+            <div class="profile-card">
+              <div class="profile-card-header">
+                <h3>Activity</h3>
+              </div>
+              <div class="profile-card-content">
+                <div class="activity-list">
+                  <div class="activity-item">
+                    <div class="activity-icon">
+                      <i class="fas fa-car"></i>
+                    </div>
+                    <div class="activity-content">
+                      <div class="activity-title">Register a vehicle</div>
+                    </div>
+                    <a href="vehicle-registration.html" class="activity-action"
+                      >Go <i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                  <div class="activity-item">
+                    <div class="activity-icon">
+                      <i class="fas fa-route"></i>
+                    </div>
+                    <div class="activity-content">
+                      <div class="activity-title">Record a trip</div>
+                    </div>
+                    <a href="log-trip.html" class="activity-action"
+                      >Go <i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                  <div class="activity-item">
+                    <div class="activity-icon">
+                      <i class="fas fa-file-download"></i>
+                    </div>
+                    <div class="activity-content">
+                      <div class="activity-title">Download report</div>
+                    </div>
+                    <a href="#" id="downloadReportBtn" class="activity-action"
+                      >Go <i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                  <div class="activity-item">
+                    <div class="activity-icon">
+                      <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="activity-content">
+                      <div class="activity-title">Get Recommendations</div>
+                    </div>
+                    <a href="recommendations.html" class="activity-action"
+                      >Go <i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-card">
+              <div class="profile-card-header">
+                <h3>Badges</h3>
+                <a href="#" id="earnBadgeBtn" class="badge-info-btn"
+                  ><i class="fas fa-info-circle"></i
+                ></a>
+              </div>
+              <div class="profile-card-content">
+                <div class="badges-grid">
+                  <div class="badge-item">
+                    <img
+                      src="https://i.ibb.co/Jm9DjxL/hero-image.jpg"
+                      alt="First Trip Badge"
+                    />
+                    <span>First Trip</span>
+                  </div>
+                  <div class="badge-item">
+                    <img
+                      src="https://i.ibb.co/YQfgG2S/electric-car.jpg"
+                      alt="Carbon Saver"
+                    />
+                    <span>Carbon Saver</span>
+                  </div>
+                  <div class="badge-item">
+                    <img
+                      src="https://i.ibb.co/Lk4Lv9B/solar-panels.jpg"
+                      alt="Eco Warrior"
+                    />
+                    <span>Eco Warrior</span>
+                  </div>
+                  <div class="badge-item locked">
+                    <img
+                      src="https://i.ibb.co/Jm9DjxL/hero-image.jpg"
+                      alt="Locked Badge"
+                    />
+                    <span>Locked</span>
+                  </div>
+                  <div class="badge-item locked">
+                    <img
+                      src="https://i.ibb.co/YQfgG2S/electric-car.jpg"
+                      alt="Locked Badge"
+                    />
+                    <span>Locked</span>
+                  </div>
+                  <div class="badge-item locked">
+                    <img
+                      src="https://i.ibb.co/Lk4Lv9B/solar-panels.jpg"
+                      alt="Locked Badge"
+                    />
+                    <span>Locked</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </main>
     </div>
 
     <!-- Edit Profile Modal -->
     <div id="editProfileModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Edit Profile</h2>
-                <span class="close">&times;</span>
-            </div>
-            <div class="modal-body">
-                <form id="editProfileForm">
-                    <div class="form-group">
-                        <label for="editName">Name</label>
-                        <input type="text" id="editName" value="John Doe">
-                    </div>
-                    <div class="form-group">
-                        <label for="editEmail">Email Address</label>
-                        <input type="email" id="editEmail" value="rohanmainali@gmail.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="editLocation">Location</label>
-                        <input type="text" id="editLocation" value="State/Province">
-                    </div>
-                    <div class="form-actions">
-                        <button type="button" class="btn-secondary modal-cancel">Cancel</button>
-                        <button type="submit" class="btn">Save Changes</button>
-                    </div>
-                </form>
-            </div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Edit Profile</h2>
+          <span class="close">&times;</span>
         </div>
+        <div class="modal-body">
+          <form id="editProfileForm">
+            <div class="form-group">
+              <label for="editName">Name</label>
+              <input type="text" id="editName" value="John Doe" />
+            </div>
+            <div class="form-group">
+              <label for="editEmail">Email Address</label>
+              <input
+                type="email"
+                id="editEmail"
+                value="rohanmainali@gmail.com"
+              />
+            </div>
+            <div class="form-group">
+              <label for="editLocation">Location</label>
+              <input type="text" id="editLocation" value="State/Province" />
+            </div>
+            <div class="form-actions">
+              <button type="button" class="btn-secondary modal-cancel">
+                Cancel
+              </button>
+              <button type="submit" class="btn">Save Changes</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
 
     <!-- Add Vehicle Modal -->
     <div id="addVehicleModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Add Vehicle</h2>
-                <span class="close">&times;</span>
-            </div>
-            <div class="modal-body">
-                <form id="addVehicleForm">
-                    <div class="form-group">
-                        <label for="vehicleMake">Make</label>
-                        <input type="text" id="vehicleMake" placeholder="e.g., Toyota">
-                    </div>
-                    <div class="form-group">
-                        <label for="vehicleModel">Model</label>
-                        <input type="text" id="vehicleModel" placeholder="e.g., Prius">
-                    </div>
-                    <div class="form-group">
-                        <label for="vehicleYear">Year</label>
-                        <input type="number" id="vehicleYear" placeholder="e.g., 2020">
-                    </div>
-                    <div class="form-group">
-                        <label for="vehicleType">Type</label>
-                        <select id="vehicleType">
-                            <option value="">Select vehicle type</option>
-                            <option value="electric">Electric</option>
-                            <option value="hybrid">Hybrid</option>
-                            <option value="gasoline">Gasoline</option>
-                            <option value="diesel">Diesel</option>
-                        </select>
-                    </div>
-                    <div class="form-actions">
-                        <button type="button" class="btn-secondary modal-cancel">Cancel</button>
-                        <button type="submit" class="btn">Add Vehicle</button>
-                    </div>
-                </form>
-            </div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Add Vehicle</h2>
+          <span class="close">&times;</span>
         </div>
+        <div class="modal-body">
+          <form id="addVehicleForm">
+            <div class="form-group">
+              <label for="vehicleMake">Make</label>
+              <input type="text" id="vehicleMake" placeholder="e.g., Toyota" />
+            </div>
+            <div class="form-group">
+              <label for="vehicleModel">Model</label>
+              <input type="text" id="vehicleModel" placeholder="e.g., Prius" />
+            </div>
+            <div class="form-group">
+              <label for="vehicleYear">Year</label>
+              <input type="number" id="vehicleYear" placeholder="e.g., 2020" />
+            </div>
+            <div class="form-group">
+              <label for="vehicleType">Type</label>
+              <select id="vehicleType">
+                <option value="">Select vehicle type</option>
+                <option value="electric">Electric</option>
+                <option value="hybrid">Hybrid</option>
+                <option value="gasoline">Gasoline</option>
+                <option value="diesel">Diesel</option>
+              </select>
+            </div>
+            <div class="form-actions">
+              <button type="button" class="btn-secondary modal-cancel">
+                Cancel
+              </button>
+              <button type="submit" class="btn">Add Vehicle</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
 
     <!-- Badge Info Modal -->
     <div id="badgeInfoModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Earn Badges</h2>
-                <span class="close">&times;</span>
-            </div>
-            <div class="modal-body">
-                <div class="badge-info-list">
-                    <div class="badge-info-item">
-                        <img src="https://i.ibb.co/Jm9DjxL/hero-image.jpg" alt="First Trip Badge">
-                        <div class="badge-info-content">
-                            <h3>First Trip</h3>
-                            <p>Log your first trip to earn this badge.</p>
-                        </div>
-                    </div>
-                    <div class="badge-info-item">
-                        <img src="https://i.ibb.co/YQfgG2S/electric-car.jpg" alt="Carbon Saver">
-                        <div class="badge-info-content">
-                            <h3>Carbon Saver</h3>
-                            <p>Reduce your carbon emissions by 10% to earn this badge.</p>
-                        </div>
-                    </div>
-                    <div class="badge-info-item">
-                        <img src="https://i.ibb.co/Lk4Lv9B/solar-panels.jpg" alt="Eco Warrior">
-                        <div class="badge-info-content">
-                            <h3>Eco Warrior</h3>
-                            <p>Log 10 trips with eco-friendly transportation to earn this badge.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Earn Badges</h2>
+          <span class="close">&times;</span>
         </div>
+        <div class="modal-body">
+          <div class="badge-info-list">
+            <div class="badge-info-item">
+              <img
+                src="https://i.ibb.co/Jm9DjxL/hero-image.jpg"
+                alt="First Trip Badge"
+              />
+              <div class="badge-info-content">
+                <h3>First Trip</h3>
+                <p>Log your first trip to earn this badge.</p>
+              </div>
+            </div>
+            <div class="badge-info-item">
+              <img
+                src="https://i.ibb.co/YQfgG2S/electric-car.jpg"
+                alt="Carbon Saver"
+              />
+              <div class="badge-info-content">
+                <h3>Carbon Saver</h3>
+                <p>Reduce your carbon emissions by 10% to earn this badge.</p>
+              </div>
+            </div>
+            <div class="badge-info-item">
+              <img
+                src="https://i.ibb.co/Lk4Lv9B/solar-panels.jpg"
+                alt="Eco Warrior"
+              />
+              <div class="badge-info-content">
+                <h3>Eco Warrior</h3>
+                <p>
+                  Log 10 trips with eco-friendly transportation to earn this
+                  badge.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Download Report Modal -->
     <div id="reportModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Download Report</h2>
-                <span class="close">&times;</span>
-            </div>
-            <div class="modal-body">
-                <div class="report-options">
-                    <div class="form-group">
-                        <label>Report Type</label>
-                        <select id="reportType">
-                            <option value="emissions">Carbon Emissions</option>
-                            <option value="trips">Trip History</option>
-                            <option value="comparison">Comparison Analysis</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Time Period</label>
-                        <select id="reportPeriod">
-                            <option value="week">Last Week</option>
-                            <option value="month">Last Month</option>
-                            <option value="quarter">Last 3 Months</option>
-                            <option value="year">Last Year</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Format</label>
-                        <select id="reportFormat">
-                            <option value="pdf">PDF</option>
-                            <option value="csv">CSV</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-actions">
-                    <button type="button" class="btn-secondary modal-cancel">Cancel</button>
-                    <button type="button" class="btn" id="generateReportBtn">Generate Report</button>
-                </div>
-            </div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Download Report</h2>
+          <span class="close">&times;</span>
         </div>
+        <div class="modal-body">
+          <div class="report-options">
+            <div class="form-group">
+              <label>Report Type</label>
+              <select id="reportType">
+                <option value="emissions">Carbon Emissions</option>
+                <option value="trips">Trip History</option>
+                <option value="comparison">Comparison Analysis</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Time Period</label>
+              <select id="reportPeriod">
+                <option value="week">Last Week</option>
+                <option value="month">Last Month</option>
+                <option value="quarter">Last 3 Months</option>
+                <option value="year">Last Year</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Format</label>
+              <select id="reportFormat">
+                <option value="pdf">PDF</option>
+                <option value="csv">CSV</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn-secondary modal-cancel">
+              Cancel
+            </button>
+            <button type="button" class="btn" id="generateReportBtn">
+              Generate Report
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Success Notification -->
     <div id="notification" class="notification">
-        <div class="notification-content">
-            <i class="fas fa-check-circle"></i>
-            <span id="notificationMessage">Operation completed successfully!</span>
-        </div>
+      <div class="notification-content">
+        <i class="fas fa-check-circle"></i>
+        <span id="notificationMessage">Operation completed successfully!</span>
+      </div>
     </div>
 
-    <footer>
-        <div class="container">
-            <div class="footer-bottom">
-                <p>2025 copyright</p>
-                <div class="footer-logo-small">
-                    <div class="logo-badge">Logo</div>
-                </div>
-                <div class="social-dots">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
-            </div>
-        </div>
-    </footer>
-
     <script src="js/profile.js"></script>
-</body>
+  </body>
 </html>

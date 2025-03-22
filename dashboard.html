@@ -1,194 +1,400 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard - EcoTrack</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Update the Chart.js script tag to use the official CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-    <header class="dashboard-header">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="https://i.ibb.co/Jt5zbWV/eco-car-logo.png" alt="Carbon Calculator Logo">
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="blogs.html">Blogs</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-            <div class="user-menu">
-                <a href="#" class="notification-icon"><i class="far fa-envelope"></i></a>
-                <div class="profile-dropdown">
-                    <div class="profile-pic" id="profileDropdownBtn">
-                        <img src="https://i.ibb.co/Lk4Lv9B/solar-panels.jpg" alt="Profile Picture">
-                    </div>
-                    <div class="dropdown-menu" id="profileDropdown">
-                        <p class="dropdown-header">Logged in as <span id="userName">John Doe</span></p>
-                        <ul>
-                            <li><a href="dashboard.html">Dashboard</a></li>
-                            <li><a href="profile.html">Profile</a></li>
-                            <li><a href="vehicle-registration.html">Vehicle Registration</a></li>
-                            <li><a href="log-trip.html">Log a trip</a></li>
-                            <li><a href="recommendations.html">Recommendations</a></li>
-                            <li><a href="#" id="logoutBtn">Logout</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+  </head>
+  <body>
+    <div class="dashboard-wrapper">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="logo">
+            <a href="index.html">
+              <img
+                src="https://i.ibb.co/Jt5zbWV/eco-car-logo.png"
+                alt="EcoTrack Logo"
+              />
+            </a>
+          </div>
+          <h2>Dashboard</h2>
         </div>
-    </header>
 
-    <div class="dashboard-container">
-        <div class="sidebar">
-            <h2>Dashboard</h2>
-            <div class="sidebar-nav">
-                <ul>
-                    <li><a href="dashboard.html" class="active">Overview</a></li>
-                    <li><a href="profile.html">Profile</a></li>
-                    <li><a href="vehicle-registration.html">Vehicle Registration</a></li>
-                    <li><a href="log-trip.html">Log a Trip</a></li>
-                    <li><a href="recommendations.html">Recommendations</a></li>
-                    <li><a href="#" id="sidebarLogoutBtn">Logout</a></li>
-                </ul>
-            </div>
+        <div class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="dashboard.html" class="active"
+                ><i class="fas fa-chart-pie"></i> Overview</a
+              >
+            </li>
+            <li>
+              <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+            </li>
+            <li>
+              <a href="vehicle-registration.html"
+                ><i class="fas fa-car"></i> Vehicle Registration</a
+              >
+            </li>
+            <li>
+              <a href="log-trip.html"
+                ><i class="fas fa-route"></i> Log a Trip</a
+              >
+            </li>
+            <li>
+              <a href="recommendations.html"
+                ><i class="fas fa-lightbulb"></i> Recommendations</a
+              >
+            </li>
+            <li>
+              <a href="community-challenge.html"
+                ><i class="fas fa-users"></i>
+                <span>Community Challenge</span></a
+              >
+            </li>
+            <li>
+              <a href="#" id="sidebarLogoutBtn"
+                ><i class="fas fa-sign-out-alt"></i> Logout</a
+              >
+            </li>
+          </ul>
         </div>
+
+        <div class="sidebar-footer">
+          <p>© 2025 EcoTrack</p>
+        </div>
+      </aside>
+
+      <main class="dashboard-main">
+        <header class="dashboard-header">
+          <div class="header-left">
+            <h1>Dashboard Overview</h1>
+          </div>
+
+          <!-- Remove the search bar from the header-right div -->
+          <div class="header-right">
+            <a href="#" class="notification-icon">
+              <i class="far fa-envelope"></i>
+              <span class="notification-badge">3</span>
+            </a>
+
+            <div class="user-profile">
+              <div class="profile-pic" id="profileDropdownBtn">
+                <img
+                  src="https://i.ibb.co/Lk4Lv9B/solar-panels.jpg"
+                  alt="Profile Picture"
+                />
+              </div>
+              <div class="dropdown-menu" id="profileDropdown">
+                <p class="dropdown-header">
+                  Logged in as <span id="userName">John Doe</span>
+                </p>
+                <ul>
+                  <li><a href="dashboard.html">Dashboard</a></li>
+                  <li><a href="profile.html">Profile</a></li>
+                  <li>
+                    <a href="vehicle-registration.html">Vehicle Registration</a>
+                  </li>
+                  <li><a href="log-trip.html">Log a trip</a></li>
+                  <li><a href="recommendations.html">Recommendations</a></li>
+                  <li>
+                    <a href="community-challenge.html">Community Challenge</a>
+                  </li>
+                  <li><a href="#" id="logoutBtn">Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </header>
+
         <div class="dashboard-content">
-            <div class="dashboard-cards">
-                <div class="dashboard-card">
-                    <h3>Improvement</h3>
-                    <div class="card-content">
-                        <div class="improvement-stat">
-                            <span class="stat-number">15%</span>
-                            <span class="stat-label">Carbon reduction from last month</span>
-                        </div>
-                        <div class="improvement-icon">
-                            <i class="fas fa-arrow-up"></i>
-                        </div>
-                    </div>
+          <div class="welcome-banner">
+            <div class="welcome-text">
+              <h2>Welcome back, <span id="welcomeUserName">John</span>!</h2>
+              <p>
+                Here's an overview of your carbon footprint and recent activity.
+              </p>
+            </div>
+            <div class="welcome-actions">
+              <a href="log-trip.html" class="btn btn-primary">
+                <i class="fas fa-plus"></i> Log New Trip
+              </a>
+            </div>
+          </div>
+
+          <div class="stats-cards">
+            <div class="stat-card improvement">
+              <div class="stat-icon">
+                <i class="fas fa-arrow-up"></i>
+              </div>
+              <div class="stat-content">
+                <h3>Improvement</h3>
+                <div class="stat-value">15%</div>
+                <div class="stat-description">
+                  Carbon reduction from last month
                 </div>
-                <div class="dashboard-card">
-                    <h3>Total Saved</h3>
-                    <div class="card-content">
-                        <div class="improvement-stat">
-                            <span class="stat-number">245kg</span>
-                            <span class="stat-label">Total carbon saved</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="dashboard-card">
-                    <h3>Eco-Friendly Trips</h3>
-                    <div class="card-content">
-                        <div class="improvement-stat">
-                            <span class="stat-number">12trips</span>
-                            <span class="stat-label">Eco-friendly trips this month</span>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
 
-            <div class="chart-section">
-                <div class="chart-header">
-                    <h2>My Carbon Emissions Over Time</h2>
-                    <div class="chart-filter">
-                        <select id="timeRangeFilter">
-                            <option value="7">Last 7 days</option>
-                            <option value="30">Last 30 days</option>
-                            <option value="90">Last 3 months</option>
-                            <option value="365">Last year</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="chart-container">
-                    <div class="chart-loading" id="emissionsChartLoading">
-                        <div class="spinner"></div>
-                        <p>Loading chart data...</p>
-                    </div>
-                    <canvas id="emissionsChart"></canvas>
-                </div>
+            <div class="stat-card total-saved">
+              <div class="stat-icon">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <div class="stat-content">
+                <h3>Total Saved</h3>
+                <div class="stat-value">245kg</div>
+                <div class="stat-description">Total carbon saved</div>
+              </div>
             </div>
 
-            <div class="chart-section">
-                <div class="chart-header">
-                    <h2>Carbon Emission by Vehicle</h2>
+            <div class="stat-card eco-trips">
+              <div class="stat-icon">
+                <i class="fas fa-bicycle"></i>
+              </div>
+              <div class="stat-content">
+                <h3>Eco-Friendly Trips</h3>
+                <div class="stat-value">12</div>
+                <div class="stat-description">
+                  Eco-friendly trips this month
                 </div>
-                <div class="chart-container">
-                    <div class="chart-loading" id="vehicleEmissionsChartLoading">
-                        <div class="spinner"></div>
-                        <p>Loading chart data...</p>
-                    </div>
-                    <canvas id="vehicleEmissionsChart"></canvas>
-                </div>
+              </div>
             </div>
 
-            <div class="chart-section">
-                <div class="chart-header">
-                    <h2>Carbon Emission Sources</h2>
+            <div class="stat-card streak">
+              <div class="stat-icon">
+                <i class="fas fa-fire"></i>
+              </div>
+              <div class="stat-content">
+                <h3>Current Streak</h3>
+                <div class="stat-value">7 days</div>
+                <div class="stat-description">Of logging activity</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="chart-grid">
+            <div class="chart-card">
+              <div class="chart-header">
+                <h3>My Carbon Emissions Over Time</h3>
+                <div class="chart-actions">
+                  <select id="timeRangeFilter">
+                    <option value="7">Last 7 days</option>
+                    <option value="30">Last 30 days</option>
+                    <option value="90">Last 3 months</option>
+                    <option value="365">Last year</option>
+                  </select>
                 </div>
-                <div class="chart-container">
-                    <div class="chart-loading" id="emissionSourcesChartLoading">
-                        <div class="spinner"></div>
-                        <p>Loading chart data...</p>
-                    </div>
-                    <canvas id="emissionSourcesChart"></canvas>
+              </div>
+              <div class="chart-container">
+                <div class="chart-loading" id="emissionsChartLoading">
+                  <div class="spinner"></div>
+                  <p>Loading chart data...</p>
                 </div>
+                <canvas id="emissionsChart"></canvas>
+              </div>
             </div>
 
-            <div class="chart-section">
-                <div class="chart-header">
-                    <h2>Your Carbon Footprint Comparison</h2>
+            <div class="chart-card">
+              <div class="chart-header">
+                <h3>Carbon Emission by Vehicle</h3>
+                <div class="chart-actions">
+                  <button class="chart-refresh-btn" id="refreshVehicleChart">
+                    <i class="fas fa-sync-alt"></i>
+                  </button>
                 </div>
-                <div class="footprint-comparison">
-                    <div class="footprint-item">
-                        <h3>Your Footprint</h3>
-                        <p class="footprint-value">3.2 tons</p>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 60%;"></div>
-                        </div>
-                    </div>
-                    <div class="footprint-item">
-                        <h3>National Average</h3>
-                        <p class="footprint-value">5.3 tons</p>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 100%;"></div>
-                        </div>
-                    </div>
-                    <div class="footprint-item">
-                        <h3>Sustainable Target</h3>
-                        <p class="footprint-value">2.0 tons</p>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 40%;"></div>
-                        </div>
-                    </div>
+              </div>
+              <div class="chart-container">
+                <div class="chart-loading" id="vehicleEmissionsChartLoading">
+                  <div class="spinner"></div>
+                  <p>Loading chart data...</p>
                 </div>
+                <canvas id="vehicleEmissionsChart"></canvas>
+              </div>
             </div>
+
+            <div class="chart-card">
+              <div class="chart-header">
+                <h3>Carbon Emission Sources</h3>
+                <div class="chart-actions">
+                  <button class="chart-refresh-btn" id="refreshSourcesChart">
+                    <i class="fas fa-sync-alt"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="chart-container">
+                <div class="chart-loading" id="emissionSourcesChartLoading">
+                  <div class="spinner"></div>
+                  <p>Loading chart data...</p>
+                </div>
+                <canvas id="emissionSourcesChart"></canvas>
+              </div>
+            </div>
+
+            <div class="chart-card footprint-comparison">
+              <div class="chart-header">
+                <h3>Your Carbon Footprint Comparison</h3>
+              </div>
+              <div class="comparison-container">
+                <div class="comparison-item">
+                  <div class="comparison-label">
+                    <span>Your Footprint</span>
+                    <span class="comparison-value">3.2 tons</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 60%"></div>
+                  </div>
+                </div>
+
+                <div class="comparison-item">
+                  <div class="comparison-label">
+                    <span>National Average</span>
+                    <span class="comparison-value">5.3 tons</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 100%"></div>
+                  </div>
+                </div>
+
+                <div class="comparison-item">
+                  <div class="comparison-label">
+                    <span>Sustainable Target</span>
+                    <span class="comparison-value">2.0 tons</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 40%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="recent-activity">
+            <div class="section-header">
+              <h3>Recent Activity</h3>
+              <a href="#" class="view-all">View All</a>
+            </div>
+
+            <div class="activity-list">
+              <div class="activity-item">
+                <div class="activity-icon">
+                  <i class="fas fa-car"></i>
+                </div>
+                <div class="activity-content">
+                  <div class="activity-title">Commute to Work</div>
+                  <div class="activity-details">
+                    <span>15 km</span>
+                    <span>•</span>
+                    <span>2.3 kg CO2</span>
+                  </div>
+                </div>
+                <div class="activity-time">Today</div>
+              </div>
+
+              <div class="activity-item">
+                <div class="activity-icon">
+                  <i class="fas fa-bicycle"></i>
+                </div>
+                <div class="activity-content">
+                  <div class="activity-title">Cycling to Grocery Store</div>
+                  <div class="activity-details">
+                    <span>3 km</span>
+                    <span>•</span>
+                    <span>0 kg CO2</span>
+                  </div>
+                </div>
+                <div class="activity-time">Yesterday</div>
+              </div>
+
+              <div class="activity-item">
+                <div class="activity-icon">
+                  <i class="fas fa-bus"></i>
+                </div>
+                <div class="activity-content">
+                  <div class="activity-title">Bus to Downtown</div>
+                  <div class="activity-details">
+                    <span>12 km</span>
+                    <span>•</span>
+                    <span>0.8 kg CO2</span>
+                  </div>
+                </div>
+                <div class="activity-time">2 days ago</div>
+              </div>
+
+              <div class="activity-item">
+                <div class="activity-icon">
+                  <i class="fas fa-car"></i>
+                </div>
+                <div class="activity-content">
+                  <div class="activity-title">Weekend Trip</div>
+                  <div class="activity-details">
+                    <span>45 km</span>
+                    <span>•</span>
+                    <span>6.7 kg CO2</span>
+                  </div>
+                </div>
+                <div class="activity-time">3 days ago</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="eco-tips">
+            <div class="section-header">
+              <h3>Eco Tips for You</h3>
+            </div>
+
+            <div class="tips-container">
+              <div class="tip-card">
+                <div class="tip-icon">
+                  <i class="fas fa-tachometer-alt"></i>
+                </div>
+                <h4>Maintain Proper Tire Pressure</h4>
+                <p>
+                  Keeping your tires properly inflated can improve fuel
+                  efficiency by up to 3%.
+                </p>
+              </div>
+
+              <div class="tip-card">
+                <div class="tip-icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <h4>Try Carpooling</h4>
+                <p>
+                  Sharing rides with coworkers can cut your commuting emissions
+                  in half.
+                </p>
+              </div>
+
+              <div class="tip-card">
+                <div class="tip-icon">
+                  <i class="fas fa-bolt"></i>
+                </div>
+                <h4>Consider an Electric Vehicle</h4>
+                <p>
+                  For your next car purchase, an EV can reduce your carbon
+                  footprint by 50%.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+      </main>
     </div>
 
-    <footer>
-        <div class="container">
-            <div class="footer-bottom">
-                <p>2025 copyright</p>
-                <div class="footer-logo-small">
-                    <div class="logo-badge">Logo</div>
-                </div>
-                <div class="social-dots">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- Success Notification -->
+    <div id="notification" class="notification">
+      <div class="notification-content">
+        <i class="fas fa-check-circle"></i>
+        <span id="notificationMessage">Operation completed successfully!</span>
+      </div>
+    </div>
 
     <script src="js/dashboard.js"></script>
-</body>
+  </body>
 </html>

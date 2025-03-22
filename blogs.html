@@ -1,88 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carbon Calculator | Blogs</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog | EcoTrack - Carbon Emission Calculator</title>
+    <link rel="stylesheet" href="css/blogs.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <header>
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="https://i.ibb.co/Jt5zbWV/eco-car-logo.png" alt="Carbon Calculator Logo">
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li class="active"><a href="blogs.html">Blogs</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-            <div id="auth-button-container" class="join-btn">
-                <a href="signup.html" class="btn">Join Us</a>
-            </div>
-            <div class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="https://i.ibb.co/Jt5zbWV/eco-car-logo.png"
+              alt="EcoTrack Logo"
+            />
+          </a>
         </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="active"><a href="blogs.html">Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div id="auth-button-container" class="join-btn">
+          <a href="signup.html" class="btn">Join Us</a>
+        </div>
+        <div class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
     </header>
 
-    <section class="page-header">
-        <div class="container">
-            <h1>Learn more about Carbon Emission</h1>
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+      <div class="container">
+        <div class="blog-hero-content">
+          <h1>Insights on Carbon Emissions & Sustainability</h1>
+          <p>
+            Explore our collection of articles, guides, and insights to help you
+            understand and reduce your carbon footprint.
+          </p>
+
+          <div class="blog-search">
+            <input type="text" placeholder="Search for articles..." />
+            <button type="submit"><i class="fas fa-search"></i></button>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section class="blogs-content">
-        <div class="container">
-            <div class="blog-list">
-                <article class="blog-item">
-                    <div class="blog-image">
-                        <img src="https://i.ibb.co/YQfgG2S/electric-car.jpg" alt="Electric vehicle">
-                    </div>
-                    <div class="blog-content">
-                        <h2>Are electric vehicles really helping the environment?</h2>
-                        <p>Electric vehicles (EVs) are revolutionizing transportation by offering a cleaner, more sustainable alternative to traditional gas-powered cars. Unlike internal combustion engines, EVs produce zero tailpipe emissions, significantly reducing air pollution and greenhouse gas output. Even whe...</p>
-                        <a href="blog-detail.html" class="btn">Read more</a>
-                    </div>
-                </article>
-                
-                <article class="blog-item">
-                    <div class="blog-image">
-                        <img src="https://i.ibb.co/Lk4Lv9B/solar-panels.jpg" alt="Sustainable energy">
-                    </div>
-                    <div class="blog-content">
-                        <h2>How renewable energy is changing the carbon footprint game</h2>
-                        <p>Renewable energy sources like solar, wind, and hydroelectric power are transforming how we think about carbon emissions. By harnessing natural resources that don't deplete over time, we can generate electricity without the harmful greenhouse gases associated with fossil fuels. This shift is...</p>
-                        <a href="blog-detail.html" class="btn">Read more</a>
-                    </div>
-                </article>
-            </div>
+    <!-- Blog Categories -->
+    <section class="blog-categories">
+      <div class="container">
+        <div class="categories-container">
+          <a href="#" class="category-tag active">All Topics</a>
+          <a href="#" class="category-tag">Electric Vehicles</a>
+          <a href="#" class="category-tag">Renewable Energy</a>
+          <a href="#" class="category-tag">Sustainable Living</a>
+          <a href="#" class="category-tag">Carbon Footprint</a>
+          <a href="#" class="category-tag">Climate Change</a>
         </div>
+      </div>
+    </section>
+
+    <!-- Featured Blog -->
+    <section class="featured-blog">
+      <div class="container">
+        <div class="featured-blog-header">
+          <h2>Featured Article</h2>
+        </div>
+
+        <div class="featured-blog-card">
+          <div class="featured-blog-image">
+            <img
+              src="https://i.ibb.co/YQfgG2S/electric-car.jpg"
+              alt="Electric vehicle"
+            />
+          </div>
+          <div class="featured-blog-content">
+            <div class="blog-meta">
+              <span><i class="far fa-calendar"></i> April 15, 2025</span>
+              <span><i class="far fa-user"></i> By Admin</span>
+              <span><i class="far fa-folder"></i> Electric Vehicles</span>
+            </div>
+            <h3>Are electric vehicles really helping the environment?</h3>
+            <p>
+              Electric vehicles (EVs) are revolutionizing transportation by
+              offering a cleaner, more sustainable alternative to traditional
+              gas-powered cars. Unlike internal combustion engines, EVs produce
+              zero tailpipe emissions, significantly reducing air pollution and
+              greenhouse gas output. Even when considering the emissions from
+              electricity generation, studies show that EVs have a lower carbon
+              footprint over their lifetime compared to conventional vehicles.
+            </p>
+            <a href="blog-detail.html" class="read-more-btn"
+              >Read More <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blog-grid-section">
+      <div class="container">
+        <div class="blog-grid-header">
+          <h2>Latest Articles</h2>
+        </div>
+
+        <div class="blog-grid">
+          <!-- Blog Card 1 -->
+          <div class="blog-card">
+            <div class="blog-card-image">
+              <img
+                src="https://i.ibb.co/Lk4Lv9B/solar-panels.jpg"
+                alt="Renewable energy"
+              />
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-card-meta">
+                <span><i class="far fa-calendar"></i> April 10, 2025</span>
+                <span><i class="far fa-user"></i> By Admin</span>
+              </div>
+              <h3>
+                How renewable energy is changing the carbon footprint game
+              </h3>
+              <p>
+                Renewable energy sources like solar, wind, and hydroelectric
+                power are transforming how we think about carbon emissions. By
+                harnessing natural resources that don't deplete over time, we
+                can generate electricity without the harmful greenhouse gases
+                associated with fossil fuels.
+              </p>
+              <a href="blog-detail.html" class="read-more-btn"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Blog Card 2 -->
+          <div class="blog-card">
+            <div class="blog-card-image">
+              <img
+                src="https://i.ibb.co/Jm9DjxL/hero-image.jpg"
+                alt="Carbon footprint"
+              />
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-card-meta">
+                <span><i class="far fa-calendar"></i> April 5, 2025</span>
+                <span><i class="far fa-user"></i> By Admin</span>
+              </div>
+              <h3>10 simple ways to reduce your carbon footprint at home</h3>
+              <p>
+                Making small changes in your daily habits can have a significant
+                impact on your carbon footprint. From energy-efficient
+                appliances to mindful consumption, discover practical tips that
+                can help you live more sustainably without drastically changing
+                your lifestyle.
+              </p>
+              <a href="blog-detail.html" class="read-more-btn"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Blog Card 3 -->
+          <div class="blog-card">
+            <div class="blog-card-image">
+              <img
+                src="https://i.ibb.co/YQfgG2S/electric-car.jpg"
+                alt="Electric vehicle charging"
+              />
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-card-meta">
+                <span><i class="far fa-calendar"></i> March 28, 2025</span>
+                <span><i class="far fa-user"></i> By Admin</span>
+              </div>
+              <h3>The future of electric vehicle charging infrastructure</h3>
+              <p>
+                As electric vehicles become more popular, the need for
+                accessible charging infrastructure grows. Learn about the latest
+                developments in EV charging technology and how cities around the
+                world are adapting to support the transition to electric
+                mobility.
+              </p>
+              <a href="blog-detail.html" class="read-more-btn"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Blog Card 4 -->
+          <div class="blog-card">
+            <div class="blog-card-image">
+              <img
+                src="https://i.ibb.co/Lk4Lv9B/solar-panels.jpg"
+                alt="Carbon neutral"
+              />
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-card-meta">
+                <span><i class="far fa-calendar"></i> March 20, 2025</span>
+                <span><i class="far fa-user"></i> By Admin</span>
+              </div>
+              <h3>What does it really mean to be carbon neutral?</h3>
+              <p>
+                The term "carbon neutral" is increasingly used by companies and
+                individuals, but what does it actually mean? This article
+                explores the concept of carbon neutrality, how it's measured,
+                and whether carbon offsets are an effective solution.
+              </p>
+              <a href="blog-detail.html" class="read-more-btn"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Blog Card 5 -->
+          <div class="blog-card">
+            <div class="blog-card-image">
+              <img
+                src="https://i.ibb.co/Jm9DjxL/hero-image.jpg"
+                alt="Sustainable transportation"
+              />
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-card-meta">
+                <span><i class="far fa-calendar"></i> March 15, 2025</span>
+                <span><i class="far fa-user"></i> By Admin</span>
+              </div>
+              <h3>How to travel sustainably in a carbon-conscious world</h3>
+              <p>
+                Travel contributes significantly to global carbon emissions, but
+                that doesn't mean you have to stop exploring the world. Discover
+                strategies for reducing your environmental impact while
+                traveling, from choosing eco-friendly accommodations to
+                offsetting flight emissions.
+              </p>
+              <a href="blog-detail.html" class="read-more-btn"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Blog Card 6 -->
+          <div class="blog-card">
+            <div class="blog-card-image">
+              <img
+                src="https://i.ibb.co/YQfgG2S/electric-car.jpg"
+                alt="Climate policy"
+              />
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-card-meta">
+                <span><i class="far fa-calendar"></i> March 8, 2025</span>
+                <span><i class="far fa-user"></i> By Admin</span>
+              </div>
+              <h3>Understanding carbon taxes and their impact on emissions</h3>
+              <p>
+                Carbon taxes are one policy tool governments use to reduce
+                greenhouse gas emissions. This article explains how carbon taxes
+                work, their effectiveness in different regions, and how they
+                might affect individuals and businesses in the coming years.
+              </p>
+              <a href="blog-detail.html" class="read-more-btn"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+          <a href="#" class="prev"><i class="fas fa-chevron-left"></i> Prev</a>
+          <a href="#" class="active">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#" class="next">Next <i class="fas fa-chevron-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-content">
+          <h2>Stay Updated</h2>
+          <p>
+            Subscribe to our newsletter to receive the latest articles, tips,
+            and insights on carbon emissions and sustainability.
+          </p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
     </section>
 
     <footer>
-        <div class="container">
-            <div class="footer-bottom">
-                <p>2025 copyright</p>
-                <div class="footer-logo-small">
-                    <div class="logo-badge">Logo</div>
-                </div>
-                <div class="social-dots">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h3>EcoTrack</h3>
+            <p>Let's breathe fresh air</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
+          </div>
+          <div class="footer-links">
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="blogs.html">Blogs</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3>Reach Us</h3>
+            <p><i class="fas fa-phone"></i> 98xxxxxxxx</p>
+            <p><i class="fas fa-envelope"></i> info@carboncalculator.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Location</p>
+          </div>
         </div>
+      </div>
     </footer>
 
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>

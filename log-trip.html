@@ -1,134 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Log Trip - EcoTrack</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <header class="dashboard-header">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="https://i.ibb.co/Jt5zbWV/eco-car-logo.png" alt="Carbon Calculator Logo">
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="blogs.html">Blogs</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-            <div class="user-menu">
-                <a href="#" class="notification-icon"><i class="far fa-envelope"></i></a>
-                <div class="profile-dropdown">
-                    <div class="profile-pic" id="profileDropdownBtn">
-                        <img src="https://i.ibb.co/Lk4Lv9B/solar-panels.jpg" alt="Profile Picture">
-                    </div>
-                    <div class="dropdown-menu" id="profileDropdown">
-                        <p class="dropdown-header">Logged in as <span id="userName">John Doe</span></p>
-                        <ul>
-                            <li><a href="dashboard.html">Dashboard</a></li>
-                            <li><a href="profile.html">Profile</a></li>
-                            <li><a href="vehicle-registration.html">Vehicle Registration</a></li>
-                            <li><a href="log-trip.html">Log a trip</a></li>
-                            <li><a href="recommendations.html">Recommendations</a></li>
-                            <li><a href="#" id="logoutBtn">Logout</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/log-trip.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="dashboard-wrapper">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="logo">
+            <a href="index.html">
+              <img
+                src="https://i.ibb.co/Jt5zbWV/eco-car-logo.png"
+                alt="EcoTrack Logo"
+              />
+            </a>
+          </div>
+          <h2>Dashboard</h2>
         </div>
-    </header>
 
-    <div class="dashboard-container">
-        <div class="sidebar">
-            <h2>Dashboard</h2>
-            <div class="sidebar-nav">
+        <div class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="dashboard.html"
+                ><i class="fas fa-chart-pie"></i> <span>Overview</span></a
+              >
+            </li>
+            <li>
+              <a href="profile.html"
+                ><i class="fas fa-user"></i> <span>Profile</span></a
+              >
+            </li>
+            <li>
+              <a href="vehicle-registration.html"
+                ><i class="fas fa-car"></i> <span>Vehicle Registration</span></a
+              >
+            </li>
+            <li>
+              <a href="log-trip.html" class="active"
+                ><i class="fas fa-route"></i> <span>Log a Trip</span></a
+              >
+            </li>
+            <li>
+              <a href="recommendations.html"
+                ><i class="fas fa-lightbulb"></i>
+                <span>Recommendations</span></a
+              >
+            </li>
+            <li>
+              <a href="community-challenge.html"
+                ><i class="fas fa-users"></i>
+                <span>Community Challenge</span></a
+              >
+            </li>
+            <li>
+              <a href="#" id="sidebarLogoutBtn"
+                ><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-footer">
+          <p>© 2025 EcoTrack</p>
+        </div>
+      </aside>
+
+      <main class="dashboard-main">
+        <header class="dashboard-header">
+          <div class="header-left">
+            <h1>Log a Trip</h1>
+          </div>
+
+          <div class="header-right">
+            <a href="#" class="notification-icon">
+              <i class="far fa-envelope"></i>
+              <span class="notification-badge">3</span>
+            </a>
+
+            <div class="user-profile">
+              <div class="profile-pic" id="profileDropdownBtn">
+                <img
+                  src="https://i.ibb.co/Lk4Lv9B/solar-panels.jpg"
+                  alt="Profile Picture"
+                />
+              </div>
+              <div class="dropdown-menu" id="profileDropdown">
+                <p class="dropdown-header">
+                  Logged in as <span id="userName">John Doe</span>
+                </p>
                 <ul>
-                    <li><a href="dashboard.html">Overview</a></li>
-                    <li><a href="profile.html">Profile</a></li>
-                    <li><a href="vehicle-registration.html">Vehicle Registration</a></li>
-                    <li><a href="log-trip.html" class="active">Log a Trip</a></li>
-                    <li><a href="recommendations.html">Recommendations</a></li>
-                    <li><a href="#" id="sidebarLogoutBtn">Logout</a></li>
+                  <li><a href="dashboard.html">Dashboard</a></li>
+                  <li><a href="profile.html">Profile</a></li>
+                  <li>
+                    <a href="vehicle-registration.html">Vehicle Registration</a>
+                  </li>
+                  <li><a href="log-trip.html">Log a trip</a></li>
+                  <li><a href="recommendations.html">Recommendations</a></li>
+                  <li>
+                    <a href="community-challenge.html">Community Challenge</a>
+                  </li>
+                  <li><a href="#" id="logoutBtn">Logout</a></li>
                 </ul>
+              </div>
             </div>
-        </div>
+          </div>
+        </header>
+
         <div class="dashboard-content">
-            <div class="log-trip-form-container">
-                <div class="form-group">
-                    <label>Choose your vehicle</label>
-                    <select id="vehicle" class="form-control">
-                        <option value="" selected disabled>Select your vehicle</option>
-                        <option value="tesla">Tesla Model 3 (Electric, 2022)</option>
-                        <option value="toyota">Toyota Prius (Hybrid, 2020)</option>
-                        <option value="honda">Honda Civic (Gasoline, 2019)</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label>Distance traveled (km)</label>
-                    <input type="number" id="distance" class="form-control" value="50">
-                </div>
-                
-                <div class="form-group">
-                    <label>Trip type</label>
-                    <select id="tripType" class="form-control">
-                        <option value="" selected disabled>Select trip type</option>
-                        <option value="commute" selected>Daily commute</option>
-                        <option value="leisure">Leisure</option>
-                        <option value="business">Business</option>
-                        <option value="shopping">Shopping</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label>Traffic conditions</label>
-                    <select id="trafficConditions" class="form-control">
-                        <option value="" selected disabled>Select traffic conditions</option>
-                        <option value="light">Light traffic</option>
-                        <option value="moderate">Moderate traffic</option>
-                        <option value="heavy" selected>Heavy traffic</option>
-                        <option value="congested">Congested</option>
-                    </select>
-                </div>
-                
-                <div class="emission-result">
-                    <h3>Estimated Carbon Emission</h3>
-                    <p class="emission-value">12.00 <span>kg CO2</span></p>
-                    <p class="emission-note">This is an estimate based on your vehicle type and travel conditions</p>
-                </div>
-                
-                <div class="form-actions">
-                    <button class="btn-secondary" id="backToDashboard">Go to Dashboard</button>
-                    <button class="btn" id="saveTrip">Save Trip</button>
-                </div>
+          <div class="welcome-banner">
+            <div class="welcome-text">
+              <h2>Record Your Journey</h2>
+              <p>
+                Log your trip details to track your carbon footprint and get
+                personalized recommendations.
+              </p>
             </div>
+            <div class="welcome-actions">
+              <a href="vehicle-registration.html" class="btn btn-primary-gadi">
+                <i class="fas fa-plus"></i> Register New Vehicle
+              </a>
+            </div>
+          </div>
+
+          <div class="log-trip-container">
+            <div class="log-trip-card">
+              <div class="card-header">
+                <h3>Trip Details</h3>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="vehicle">Choose your vehicle</label>
+                  <select id="vehicle" class="form-control">
+                    <option value="" selected disabled>
+                      Select your vehicle
+                    </option>
+                    <option value="tesla">
+                      Tesla Model 3 (Electric, 2022)
+                    </option>
+                    <option value="toyota">Toyota Prius (Hybrid, 2020)</option>
+                    <option value="honda">Honda Civic (Gasoline, 2019)</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="distance">Distance traveled (km)</label>
+                  <input
+                    type="number"
+                    id="distance"
+                    class="form-control"
+                    value="50"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="tripType">Trip type</label>
+                  <select id="tripType" class="form-control">
+                    <option value="" selected disabled>Select trip type</option>
+                    <option value="commute" selected>Daily commute</option>
+                    <option value="leisure">Leisure</option>
+                    <option value="business">Business</option>
+                    <option value="shopping">Shopping</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="trafficConditions">Traffic conditions</label>
+                  <select id="trafficConditions" class="form-control">
+                    <option value="" selected disabled>
+                      Select traffic conditions
+                    </option>
+                    <option value="light">Light traffic</option>
+                    <option value="moderate">Moderate traffic</option>
+                    <option value="heavy" selected>Heavy traffic</option>
+                    <option value="congested">Congested</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="emission-result-card">
+              <div class="card-header">
+                <h3>Estimated Carbon Emission</h3>
+              </div>
+              <div class="card-body">
+                <div class="emission-result">
+                  <div class="emission-icon">
+                    <i class="fas fa-leaf"></i>
+                  </div>
+                  <div class="emission-details">
+                    <p class="emission-value">12.00 <span>kg CO2</span></p>
+                    <p class="emission-note">
+                      This is an estimate based on your vehicle type and travel
+                      conditions
+                    </p>
+                  </div>
+                </div>
+
+                <div class="emission-comparison">
+                  <div class="comparison-item">
+                    <div class="comparison-label">
+                      <span>Your Trip</span>
+                      <span class="comparison-value">12.00 kg</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 80%"></div>
+                    </div>
+                  </div>
+
+                  <div class="comparison-item">
+                    <div class="comparison-label">
+                      <span>Average Trip</span>
+                      <span class="comparison-value">15.00 kg</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 100%"></div>
+                    </div>
+                  </div>
+
+                  <div class="comparison-item">
+                    <div class="comparison-label">
+                      <span>Eco-friendly Target</span>
+                      <span class="comparison-value">5.00 kg</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 33%"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="emission-tips">
+                  <h4>Tips to Reduce Emissions</h4>
+                  <ul>
+                    <li>
+                      <i class="fas fa-check-circle"></i> Consider carpooling to
+                      reduce per-person emissions
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i> Maintain proper tire
+                      pressure for better fuel efficiency
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i> Avoid rapid
+                      acceleration and braking
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn-secondary" id="backToDashboard">Cancel</button>
+            <button class="btn-primary" id="saveTrip">Save Trip</button>
+          </div>
+
+          <div class="recent-trips">
+            <div class="section-header">
+              <h3>Recent Trips</h3>
+              <a href="#" class="view-all">View All</a>
+            </div>
+
+            <div class="trips-list">
+              <div class="trip-item">
+                <div class="trip-icon">
+                  <i class="fas fa-car"></i>
+                </div>
+                <div class="trip-content">
+                  <div class="trip-title">Commute to Work</div>
+                  <div class="trip-details">
+                    <span>15 km</span>
+                    <span>•</span>
+                    <span>2.3 kg CO2</span>
+                  </div>
+                </div>
+                <div class="trip-time">Today</div>
+              </div>
+
+              <div class="trip-item">
+                <div class="trip-icon">
+                  <i class="fas fa-bicycle"></i>
+                </div>
+                <div class="trip-content">
+                  <div class="trip-title">Cycling to Grocery Store</div>
+                  <div class="trip-details">
+                    <span>3 km</span>
+                    <span>•</span>
+                    <span>0 kg CO2</span>
+                  </div>
+                </div>
+                <div class="trip-time">Yesterday</div>
+              </div>
+
+              <div class="trip-item">
+                <div class="trip-icon">
+                  <i class="fas fa-bus"></i>
+                </div>
+                <div class="trip-content">
+                  <div class="trip-title">Bus to Downtown</div>
+                  <div class="trip-details">
+                    <span>12 km</span>
+                    <span>•</span>
+                    <span>0.8 kg CO2</span>
+                  </div>
+                </div>
+                <div class="trip-time">2 days ago</div>
+              </div>
+            </div>
+          </div>
         </div>
+      </main>
     </div>
 
-    <footer>
-        <div class="container">
-            <div class="footer-bottom">
-                <p>2025 copyright</p>
-                <div class="footer-logo-small">
-                    <div class="logo-badge">Logo</div>
-                </div>
-                <div class="social-dots">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- Success Notification -->
+    <div id="notification" class="notification">
+      <div class="notification-content">
+        <i class="fas fa-check-circle"></i>
+        <span id="notificationMessage">Trip logged successfully!</span>
+      </div>
+    </div>
 
     <script src="js/trip.js"></script>
-</body>
+  </body>
 </html>

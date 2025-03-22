@@ -1,124 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carbon Calculator | Home</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoTrack | Carbon Emission Calculator</title>
+    <link rel="stylesheet" href="css/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <header>
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="https://i.ibb.co/Jt5zbWV/eco-car-logo.png" alt="Carbon Calculator Logo">
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="blogs.html">Blogs</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-            <div id="auth-button-container" class="join-btn">
-                <a href="signup.html" class="btn">Join Us</a>
-            </div>
-            <div class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="https://i.ibb.co/Jt5zbWV/eco-car-logo.png"
+              alt="EcoTrack Logo"
+            />
+          </a>
         </div>
+        <nav>
+          <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div id="auth-button-container" class="join-btn">
+          <a href="signup.html" class="btn">Join Us</a>
+        </div>
+        <div class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-image">
-                    <img src="https://i.ibb.co/Jm9DjxL/hero-image.jpg" alt="Carbon footprint illustration">
-                </div>
-                <div class="hero-text">
-                    <h1>Reduce Your Carbon Footprint</h1>
-                    <p>Track, analyze, and reduce your carbon emissions with our easy-to-use calculator</p>
-                    <a href="#" id="calculate-btn" class="btn">Calculate Now!</a>
-                </div>
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Reduce Your Carbon Footprint</h1>
+            <p>
+              Track, analyze, and reduce your carbon emissions with our
+              easy-to-use calculator. Make a positive impact on the environment
+              today.
+            </p>
+            <div class="hero-buttons">
+              <a href="#" id="calculate-btn" class="btn btn-primary"
+                >Calculate Now</a
+              >
+              <a href="about.html" class="btn btn-secondary">Learn More</a>
             </div>
+          </div>
+          <div class="hero-image">
+            <img
+              src="https://i.ibb.co/Jm9DjxL/hero-image.jpg"
+              alt="Carbon footprint illustration"
+            />
+          </div>
         </div>
+      </div>
+      <div class="wave-divider">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 100"
+          preserveAspectRatio="none"
+        >
+          <path
+            fill="#ffffff"
+            fill-opacity="1"
+            d="M0,32L80,42.7C160,53,320,75,480,74.7C640,75,800,53,960,42.7C1120,32,1280,32,1360,32L1440,32L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z"
+          ></path>
+        </svg>
+      </div>
     </section>
 
-    <section class="recent-blogs">
-        <div class="container">
-            <h2>Recent Blogs</h2>
-            <div class="blogs-grid">
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://i.ibb.co/YQfgG2S/electric-car.jpg" alt="Electric vehicle">
-                    </div>
-                    <h3>Are electric vehicles really helping the environment?</h3>
-                    <a href="blog-detail.html" class="read-more">Read more</a>
-                </div>
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://i.ibb.co/Lk4Lv9B/solar-panels.jpg" alt="Sustainable living">
-                    </div>
-                    <h3>10 simple ways to reduce your carbon footprint at home</h3>
-                    <a href="blog-detail.html" class="read-more">Read more</a>
-                </div>
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://i.ibb.co/Jm9DjxL/hero-image.jpg" alt="Carbon neutral travel">
-                    </div>
-                    <h3>How to travel sustainably in a carbon-conscious world</h3>
-                    <a href="blog-detail.html" class="read-more">Read more</a>
-                </div>
-            </div>
+    <section class="features-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why Choose EcoTrack</h2>
+          <p>
+            Our platform makes it easy to understand and reduce your
+            environmental impact
+          </p>
         </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <h3>Accurate Tracking</h3>
+            <p>
+              Our advanced algorithms provide precise calculations of your
+              carbon emissions based on your vehicle and travel patterns.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Detailed Analytics</h3>
+            <p>
+              Visualize your carbon footprint over time with intuitive charts
+              and graphs that help you identify trends and areas for
+              improvement.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3>Smart Recommendations</h3>
+            <p>
+              Receive personalized suggestions to reduce your carbon footprint
+              based on your unique usage patterns and lifestyle.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blogs-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Latest Insights</h2>
+          <p>
+            Explore our collection of articles on sustainability and carbon
+            reduction
+          </p>
+        </div>
+
+        <div class="blogs-grid">
+          <div class="blog-card">
+            <div class="blog-image">
+              <img
+                src="https://i.ibb.co/YQfgG2S/electric-car.jpg"
+                alt="Electric vehicle"
+              />
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span><i class="far fa-calendar"></i> April 15, 2025</span>
+              </div>
+              <h3>Are electric vehicles really helping the environment?</h3>
+              <p>
+                Explore the environmental impact of electric vehicles compared
+                to traditional gas-powered cars.
+              </p>
+              <a href="blog-detail.html" class="read-more"
+                >Read more <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="blog-card">
+            <div class="blog-image">
+              <img
+                src="https://i.ibb.co/Lk4Lv9B/solar-panels.jpg"
+                alt="Sustainable living"
+              />
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span><i class="far fa-calendar"></i> April 10, 2025</span>
+              </div>
+              <h3>10 simple ways to reduce your carbon footprint at home</h3>
+              <p>
+                Small changes in your daily habits can have a significant impact
+                on your carbon footprint.
+              </p>
+              <a href="blog-detail.html" class="read-more"
+                >Read more <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="blog-card">
+            <div class="blog-image">
+              <img
+                src="https://i.ibb.co/Jm9DjxL/hero-image.jpg"
+                alt="Carbon neutral travel"
+              />
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span><i class="far fa-calendar"></i> April 5, 2025</span>
+              </div>
+              <h3>How to travel sustainably in a carbon-conscious world</h3>
+              <p>
+                Discover strategies for reducing your environmental impact while
+                traveling.
+              </p>
+              <a href="blog-detail.html" class="read-more"
+                >Read more <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-action">
+          <a href="blogs.html" class="btn btn-outline">View All Articles</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Ready to Make a Difference?</h2>
+          <p>
+            Join thousands of environmentally conscious individuals who are
+            making a positive impact with EcoTrack. Sign up today and start your
+            journey toward a more sustainable lifestyle.
+          </p>
+          <div class="cta-buttons">
+            <a href="signup.html" class="btn btn-light">Create Account</a>
+            <a href="contact.html" class="btn btn-outline-light">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">10K+</div>
+            <div class="stat-label">Active Users</div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-number">500K</div>
+            <div class="stat-label">Trips Logged</div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-number">30%</div>
+            <div class="stat-label">Average Emission Reduction</div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-number">120K</div>
+            <div class="stat-label">Trees Saved</div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>Carbon Calculator</h3>
-                    <p>Let's breathe fresh air</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h3>Explore</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="blogs.html">Blogs</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h3>Reach Us</h3>
-                    <p><i class="fas fa-phone"></i> 98xxxxxxxx</p>
-                    <p><i class="fas fa-envelope"></i> info@carboncalculator.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Location</p>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h3>EcoTrack</h3>
+            <p>Let's breathe fresh air</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
-            <div class="footer-bottom">
-                <p>© 2025 Carbon Calculator. All rights reserved.</p>
-                <div class="footer-logo-small">
-                    <div class="logo-badge">Logo</div>
-                </div>
-                <div class="social-dots">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
-            </div>
+          </div>
+          <div class="footer-links">
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="blogs.html">Blogs</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3>Reach Us</h3>
+            <p><i class="fas fa-phone"></i> 98xxxxxxxx</p>
+            <p><i class="fas fa-envelope"></i> info@carboncalculator.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Location</p>
+          </div>
         </div>
+      </div>
     </footer>
-
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
